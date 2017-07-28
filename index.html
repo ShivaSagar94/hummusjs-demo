@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"> 
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    </head>
+    <body>
+        <div class="container">
+            <div class="col-md-6">
+                <iframe src="/shared/exampleorange.pdf" width="400px" height="600px" ></iframe>                
+                <div>
+                <a target="_blank" href="/shared/exampleorange.pdf" class="btn btn-default">View PDF</a>
+                    <form action="/download" method="post" >
+                        <input type="text" name="type" value="orange" class="hide" >
+                        <input type="submit" class="btn btn-primary" value="Download orange PDF">
+                    </form>                                
+                </div>
+            </div>
+            <div class="col-md-6">
+                <iframe src="/shared/example.pdf" width="400px" height="600px" ></iframe>
+                <div>
+                <a target="_blank" href="/shared/example.pdf"  class="btn btn-default">View PDF</a>
+                    <form action="/download" method="post" >                    
+                        <input type="text" name="type" value="" class="hide btn-primary" >
+                        <input type="submit" class="btn btn-primary" value="Download example">
+                    </form>                
+                </div>
+            </div>        
+        </div>
+    </body>
+</html>
