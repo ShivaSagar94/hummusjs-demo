@@ -23,20 +23,19 @@ app.get('/', function(req, res) {
 app.post('/download',function(req,res){            
     var resultPath = './shared/output.pdf';    
     var sourcePath = './shared/example.pdf';
+    var logFilePath='./shared/output1.pdf'
         
     if(req.body.type == 'orange'){
         sourcePath = './shared/exampleorange.pdf';
     }        
-
-    var hummus = require('hummus');        
-    
-    // var pdfReader = hummus.createReader(sourcePath);
+    var hummus = require('hummus');            
+    // var pdfReader = hummus.createReader(sourcePath,{log:logFilePath});
     // pageNumber=pdfReader.getPagesCount()
     var pdfWriter = hummus.createWriterToModify(sourcePath,
-                                        {modifiedFilePath:resultPath});                
+                                        {modifiedFilePath:resultPath,log:logFilePath});                
     
     var pageModifier = new hummus.PDFPageModifier(pdfWriter,0,true);        
-    var cxt = pageModifier.startContext().getContext();                                
+    var cxt = pageModifier.startContext().getContext();
     cxt.drawCircle(400,400,30,
         {
             type:'fill',

@@ -1,0 +1,4 @@
+[ 28/07/2017 14:52:25 ] PDFParser::ParsePagesIDs, unable to find page kids array
+[ 28/07/2017 14:53:42 ] PDFParser::ParsePagesIDs, unable to find page kids array
+[ 31/07/2017 11:45:41 ] PDFParser::ParseExistingInDirectObject, failed to read object declaration, ID
+[ 31/07/2017 11:45:41 ] PDFParser::ParsePagesIDs, unable to find page kids array
