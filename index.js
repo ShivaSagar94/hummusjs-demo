@@ -22,7 +22,7 @@ app.get('/', function(req, res) {
 
 app.post('/download',function(req,res){            
     var resultPath = './shared/output.pdf';    
-    var sourcePath = './shared/example.pdf';
+    var sourcePath = './shared/test.pdf';
     var logFilePath='./shared/output1.pdf'
         
     if(req.body.type == 'orange'){
